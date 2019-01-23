@@ -1,6 +1,6 @@
 /* eslint no-param-reassign: 0 */
 // This config is for building dist files
-const getWebpackConfig = require('antd-tools/lib/getWebpackConfig');
+const getWebpackConfig = require('antd-goo-tools/lib/getWebpackConfig');
 
 const { webpack } = getWebpackConfig;
 
@@ -12,8 +12,8 @@ function ignoreMomentLocale(webpackConfig) {
 }
 
 function addLocales(webpackConfig) {
-  let packageName = 'antd-with-locales';
-  if (webpackConfig.entry['antd.min']) {
+  let packageName = 'antd-goo-with-locales';
+  if (webpackConfig.entry['antd-goo.min']) {
     packageName += '.min';
   }
   webpackConfig.entry[packageName] = './index-with-locales.js';
